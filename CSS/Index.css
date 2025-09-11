@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 2px;
+}
+
+#nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#nav a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#body img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  border: 4px solid #ffcc00;
+}
+
+#body h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+#body p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+/* Dynamic Greeting */
+#dynamic-greeting {
+  font-style: italic;
+  font-weight: bold;
+  color: #ff6600;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav a {
+    margin: 0.5rem 0;
+  }
+
+  #body h2 {
+    font-size: 1.5rem;
+  }
+
+  #body p {
+    font-size: 1rem;
+  }
+}
