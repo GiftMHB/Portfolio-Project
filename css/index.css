@@ -22,6 +22,10 @@ body {
   z-index: 1000;
 }
 
+.indicator {
+  color: #ffcc00;
+}
+
 #logo {
   font-size: 1.5rem;
   font-weight: bold;
