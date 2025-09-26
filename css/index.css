@@ -240,3 +240,16 @@ body {
   }
 }
 
+.layout {
+  border: 2px solid #ffcc00;
+  padding: 20px;
+  border-radius: 12px;   
+  width: 80%;           
+  margin: 20px auto;     
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
