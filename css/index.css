@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -22,30 +22,6 @@ body {
   z-index: 1000;
 }
 
-.indicator {
-  color: #ffcc00;
-}
-
-#logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffcc00;              
-  letter-spacing: 2px;
-
-  background-color: #222; 
-  display: inline-block;
-  padding: 10px 20px;
-  position: relative;       
-
-  /* animation */
-  animation: logo-move 4s infinite alternate;
-}
-
-@keyframes logo-move {
-  0%   { left: 0;   top: 0; }
-  100% { left: 200px; top: 0; }
-}
-
 #nav a {
   margin-left: 2rem;
   text-decoration: none;
@@ -58,38 +34,62 @@ body {
   color: #ffcc00;
 }
 
-/* Hero Section */
-#body {
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 2px;
+  background-color: #222;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  animation: logo-move 4s infinite alternate;
+}
+
+@keyframes logo-move {
+  0%   { left: 0;   top: 0; }
+  100% { left: 200px; top: 0; }
+}
+
+.indicator {
+  color: #ffcc00;
+}
+
+#intro-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  gap: 10rem;
   padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
 }
 
-#body img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: contain;
-  margin-bottom: 1.5rem;
-  border: 4px solid #ffcc00;
+#intro-section img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
 }
 
-#body h2 {
+.intro-text {
+  flex: 1;
+}
+
+#intro-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #222;
 }
 
-#body p {
-  max-width: 600px;
+#intro-section p {
   font-size: 1.1rem;
-  margin-bottom: 0.8rem;
   color: #555;
+  margin-bottom: 1rem;
 }
 
-/* Dynamic Greeting */
 #dynamic-greeting {
   font-style: italic;
   font-weight: bold;
@@ -97,7 +97,7 @@ body {
   margin-top: 1rem;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   #nav {
     flex-direction: column;
@@ -108,11 +108,21 @@ body {
     margin: 0.5rem 0;
   }
 
-  #body h2 {
+  #intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #intro-section img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  #intro-section h2 {
     font-size: 1.5rem;
   }
 
-  #body p {
+  #intro-section p {
     font-size: 1rem;
   }
 }
@@ -218,4 +228,15 @@ body {
   transform: translateY(-2px);
 }
 
+@media (max-width: 600px) {
+  .stat-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
