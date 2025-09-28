@@ -253,3 +253,40 @@ body {
   justify-content: space-around;
   margin: 20px 0;
 }
+
+@media (max-width: 768px) {
+  .infoContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .infoCards {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    min-height: 120px;
+  }
+  
+  .description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .infoContainer {
+    gap: 15px;
+  }
+  
+  .infoCards {
+    width: 95%;
+    padding: 1.2em;
+  }
+  
+  .description h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+}
